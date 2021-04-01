@@ -47,6 +47,13 @@ module.exports = [{
       path: '/jsIntroduce',
       code: '0001-0000',
       icon: 'el-icon-location'
+    },
+    {
+      id: '11',
+      name: 'JS数组篇',
+      path: '/article/js_array',
+      code: '0001-0001',
+      icon: 'el-icon-location'
     }]
   },
   {

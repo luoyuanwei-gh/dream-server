@@ -19,7 +19,7 @@
           "test2": "test2-data"
         },
         {
-          "test1": "test1-data",
+          "test1": "<a href='https://www.baidu.com' class='text-bold'>test1-data</a>",
           "test2": "test2-data"
         },
         {
@@ -72,6 +72,12 @@
           "column-span 为 all 的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中（标准变更，Chrome bug）。"
         ]
       }
-    }
+    },
+    {
+      "type": "image",
+      "data": {
+        "url": "https://imgo.yqdown.com/img2021/2/19/21/20210219769769939801.jpg"
+      }
+    }  
   ]
 }
