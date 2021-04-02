@@ -1,12 +1,12 @@
 {
-  "title": "块格式化上下文 —— 简述",
-  "author": "键盘侠",
+  "title": "JS数组详解",
+  "author": "极品码农",
   "time": "2021-1-14 18:07:05",
   "content": [
     {
       "type": "subhead",
       "data": {
-        "text": "定义："
+        "text": "作用："
       }
     },
     {
@@ -14,55 +14,92 @@
       "data": {
         "content": [
           {
-            "type": "bold",
-            "text": "<a href='https://www.baidu.com'>块格式化上下文（Block Formatting Context，BFC）</a>"
+            "text": "Array对象用于在单个的变量中存储多个值"
+          }
+        ]
+      }
+    },
+    {
+      "type": "subhead",
+      "data": {
+        "text": "创建数组的方法："
+      }
+    },
+    {
+      "type": "subhead",
+      "data": {
+        "text": "数组属性明细："
+      }
+    },
+    {
+      "type": "table",
+      "data": {
+        "columns": [{
+            "prop": "attributeName",
+            "label": "属性名称",
+            "width": "160"
           },
           {
-            "text": "是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。"
+            "prop": "attributeDesc",
+            "label": "属性描述"
           }
-        ]
+        ],
+        "data": [{
+          "attributeName": "constructor",
+          "attributeDesc": "返回对创建此对象的数组函数的引用。"
+          
+        },
+        {
+          "attributeName": "length",
+          "attributeDesc": "设置或返回数组中元素的数目。"
+          
+        },
+        {
+          "attributeName": "prototype",
+          "attributeDesc": "使您有能力向对象添加属性和方法。"
+          
+        }]
       }
     },
     {
-      "type": "list",
+      "type": "subhead",
       "data": {
-        "desc": "创建块格式化上下文：",
-        "content": [
-          "根元素（<html>）",
-          "浮动元素（元素的 float 不是 none）",
-          "绝对定位元素（元素的 position 为 absolute 或 fixed）",
-          "行内块元素（元素的 display 为 inline-block）",
-          "表格单元格（元素的 display 为 table-cell，HTML表格单元格默认为该值）",
-          "表格标题（元素的 display 为 table-caption，HTML表格标题默认为该值）",
-          "匿名表格单元格元素（元素的 display 为 table、table-row、 table-row-group、table-header-group、table-footer-group（分别是HTML table、row、tbody、thead、tfoot 的默认属性）或 inline-table）",
-          "overflow 计算值(Computed)不为 visible 的块元素",
-          "display 值为 flow-root 的元素",
-          "contain 值为 layout、content 或 paint 的元素",
-          "弹性元素（display 为 flex 或 inline-flex 元素的直接子元素）",
-          "网格元素（display 为 grid 或 inline-grid 元素的直接子元素）",
-          "多列容器（元素的 column-count 或 column-width 不为 auto，包括 column-count 为 1）",
-          "column-span 为 all 的元素始终会创建一个新的BFC，即使该元素没有包裹在一个多列容器中（标准变更，Chrome bug）。"
-        ]
+        "text": "数组方法明细："
       }
     },
     {
-      "type": "paragraph",
+      "type": "table",
       "data": {
-        "content": [
+        "expand": true,
+        "columns": [{
+            "prop": "name",
+            "label": "名称",
+            "width": "160"
+          },
           {
-            "text": "块格式化上下文包含创建它的元素内部的所有内容."
-          }
-        ]
-      }
-    },
-    {
-      "type": "paragraph",
-      "data": {
-        "content": [
+            "prop": "grammar",
+            "label": "语法"
+          },
           {
-            "text": "块格式化上下文对浮动定位与清除浮动都很重要。浮动定位和清除浮动时只会应用于同一个BFC内的元素。浮动不会影响其它BFC中元素的布局，而清除浮动只能清除同一BFC中在它前面的元素的浮动。外边距折叠（Margin collapsing）也只会发生在属于同一BFC的块级元素之间。."
+            "prop": "describe",
+            "label": "描述"
+          },
+          {
+            "prop": "change",
+            "label": "改变原数组",
+            "width": "100"
           }
-        ]
+        ],
+        "data": [{
+          "name": "concat()",
+          "grammar": "arrayObject.concat(arrayX,arrayX,......,arrayX)",
+          "describe": "<p>作用：方法用于连接两个或多个数组</p>",
+          "change": "否",
+          "expand": [
+            "1. 参数：arrayX：必需。该参数可以是具体的值，也可以是数组对象。可以是任意多个。",
+            "2. 返回值：返回一个新的数组。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。如果要进行 concat() 操作的参数是数组，那么添加的是数组中的元素，而不是数组。"
+          ]
+        }]
       }
     }
   ]
