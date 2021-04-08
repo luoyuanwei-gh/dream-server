@@ -477,6 +477,29 @@
             "2. 返回值：布尔值。",
             "3. 说明：该方法检查数组是否包含某个值。"
           ]
+        },
+        {
+          "name": "flat()",
+          "grammar": "arrayObject.flat(value)",
+          "describe": "<p>作用：用于将嵌套的数组“拉平”，变成一维的数组。</p>",
+          "change": "否",
+          "expand": [
+            "1. 参数：value：表示要“拉平”的层数",
+            "2. 返回值：返回一个新数组。",
+            "3. 说明：如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。"
+          ]
+        },
+        {
+          "name": "flatMap()",
+          "grammar": "arrayObject.flatMap(function(currentValue, index, array), pointer)",
+          "describe": "<p>作用：对原数组的每个成员执行一个函数（相当于执行Array.prototype.map()），然后对返回值组成的数组执行flat()方法。</p>",
+          "change": "否",
+          "expand": [
+            "1. 参数：function：一个遍历函数",
+            "pointer: 用来绑定遍历函数里面的this",
+            "2. 返回值：返回一个新数组。",
+            "3. 说明：回调函数参数 currentValue - 当前数组成员, index - 当前数组成员的位置（从零开始）, array - 原数组。"
+          ]
         }]
       }
     }
