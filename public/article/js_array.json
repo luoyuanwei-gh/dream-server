@@ -2,8 +2,7 @@
   "title": "JS数组详解",
   "author": "极品码农--罗源伟",
   "time": "2021-1-14 18:07:05",
-  "content": [
-    {
+  "content": [{
       "type": "subhead",
       "data": {
         "text": "作用："
@@ -12,11 +11,9 @@
     {
       "type": "paragraph",
       "data": {
-        "content": [
-          {
-            "text": "Array对象用于在单个的变量中存储多个值"
-          }
-        ]
+        "content": [{
+          "text": "Array对象用于在单个的变量中存储多个值"
+        }]
       }
     },
     {
@@ -27,8 +24,7 @@
     },
     {
       "type": "code",
-      "data": [
-        {
+      "data": [{
           "notes": "// 使用字面量创建数组",
           "text": "var arr = [1, 2, 3];",
           "print": "// arr = [1, 2, 3]"
@@ -48,12 +44,11 @@
     {
       "type": "paragraph",
       "data": {
-        "content": [
-          {
+        "content": [{
             "text": "Array()方法没有参数、一个参数、三个参数时，返回的结果都不一样。只有当参数个数不少于 2 个时，Array()才会返回由参数组成的新数组。参数只有一个正整数时，实际上是指定数组的长度。"
           },
           {
-            "text": "Array.of()基本上可以用来替代Array()或new Array()，并且不存在由于参数不同而导致的重载。它的行为非常统一。"
+            "text": "<p>Array.of()基本上可以用来替代Array()或new Array()，并且不存在由于参数不同而导致的重载。它的行为非常统一。</p>"
           }
         ]
       }
@@ -78,20 +73,21 @@
           }
         ],
         "data": [{
-          "attributeName": "constructor",
-          "attributeDesc": "返回对创建此对象的数组函数的引用。"
-          
-        },
-        {
-          "attributeName": "length",
-          "attributeDesc": "设置或返回数组中元素的数目。"
-          
-        },
-        {
-          "attributeName": "prototype",
-          "attributeDesc": "使您有能力向对象添加属性和方法。"
-          
-        }]
+            "attributeName": "constructor",
+            "attributeDesc": "返回对创建此对象的数组函数的引用。"
+
+          },
+          {
+            "attributeName": "length",
+            "attributeDesc": "设置或返回数组中元素的数目。"
+
+          },
+          {
+            "attributeName": "prototype",
+            "attributeDesc": "使您有能力向对象添加属性和方法。"
+
+          }
+        ]
       }
     },
     {
@@ -124,178 +120,306 @@
           }
         ],
         "data": [{
-          "name": "concat()",
-          "grammar": "arrayObject.concat(arrayX,arrayX,......,arrayX)",
-          "describe": "<p>作用：方法用于连接两个或多个数组</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：arrayX：必需。该参数可以是具体的值，也可以是数组对象。可以是任意多个。",
-            "2. 返回值：返回一个新的数组。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。如果要进行 concat() 操作的参数是数组，那么添加的是数组中的元素，而不是数组。"
-          ]
-        },
-				{
-				  "name": "join()",
-				  "grammar": "arrayObject.join(separator)",
-				  "describe": "<p>作用：把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。</p>",
-				  "change": "否",
-				  "expand": [
-				    "1. 参数：separator：可选。指定要使用的分隔符。如果省略该参数，则使用逗号作为分隔符。",
-				    "2. 返回值：返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。"
-				  ]
-				},
-        {
-          "name": "toString()",
-          "grammar": "arrayObject.toString()",
-          "describe": "<p>作用：可把数组转换为字符串，并返回结果。</p> ",
-          "change": "是",
-          "expand": [
-            "1. 参数：无",
-            "2. 返回值：arrayObject 的字符串表示。返回值与没有参数的 join() 方法返回的字符串相同。",
-            "3. 说明：当数组用于字符串环境时，JavaScript 会调用这一方法将数组自动转换成字符串。但是在某些情况下，需要显式地调用该方法。"
-          ]
-        },
-				{
-				  "name": "pop()",
-				  "grammar": "arrayObject.pop()",
-				  "describe": "<p>作用：删除并返回数组的最后一个元素</p>",
-				  "change": "是",
-				  "expand": [
-				    "1. 参数：无",
-				    "2. 返回值：arrayObject 的最后一个元素。",
-						"3. 说明：pop() 方法将删除 arrayObject 的最后一个元素，把数组长度减 1，并且返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。"
-				  ],
-          "code": [
-            {
-              "notes": "// 注释说明",
-              "text": ";var arr = [1, 2, 3];var arr = [1, 2, 3];var arr = [1, 2, 3];if(a===0){return 0;}"
-            },
-            {
-              "text": "var arr = [1, 2, 3];var arr = [1, 2, 3];var arr = [1, 2, 3];if(a===0){return 0;}"
-            }
-          ]
-				},
-				{
-				  "name": "push()",
-				  "grammar": "arrayObject.push(newelement1,newelement2,....,newelementX)",
-				  "describe": "<p>作用：向数组末尾添加一个或多个元素，并返回新的长度。</p> ",
-				  "change": "是",
-				  "expand": [
-				    "1. 参数：newelement1：必需。要添加到数组的第一个元素。",
-						"newelement2：可选。要添加到数组的第二个元素。",
-						"newelementX：可选。可添加多个元素。",
-				    "2. 返回值：arrayObject 的最后一个元素。",
-						"3. 说明：pop() 方法将删除 arrayObject 的最后一个元素，把数组长度减 1，并且返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。"
-				  ]
-				},
-        {
-          "name": "shift()",
-          "grammar": "arrayObject.shift()",
-          "describe": "<p>作用：方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。</p> ",
-          "change": "是",
-          "expand": [
-            "1. 参数：无",
-            "2. 返回值：数组原来的第一个元素的值。",
-        		"3. 说明：如果数组是空的，那么 shift() 方法将不进行任何操作，返回 undefined 值。请注意，该方法不创建新数组，而是直接修改原有的 arrayObject。"
-          ]
-        },
-        {
-          "name": "unshift()",
-          "grammar": "arrayObject.unshift(newelement1,newelement2,....,newelementX)",
-          "describe": "<p>作用：向数组的开头添加一个或更多元素，并返回新的长度。</p> ",
-          "change": "是",
-          "expand": [
-            "1. 参数：newelement1：必需。要添加到数组的第一个元素。",
-            "newelement2：可选。要添加到数组的第二个元素。",
-            "newelementX：可选。可添加多个元素。",
-            "2. 返回值：arrayObject 的新长度。",
-        		"3. 说明：unshift() 方法将把它的参数插入 arrayObject 的头部，并将已经存在的元素顺次地移到较高的下标处，以便留出空间。该方法的第一个参数将成为数组的新元素 0，如果还有第二个参数，它将成为新的元素 1，以此类推。"
-          ]
-        },
-        {
-          "name": "splice()",
-          "grammar": "arrayObject.splice(index,howmany,item1,.....,itemX)",
-          "describe": "<p>作用：向/从数组中添加/删除项目，然后返回被删除的项目。</p> ",
-          "change": "是",
-          "expand": [
-            "1. 参数：index：必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。",
-            "howmany：必需。要删除的项目数量。如果设置为 0，则不会删除项目。",
-            "item1, ..., itemX：可选。向数组添加的新项目。",
-            "2. 返回值：包含被删除项目的新数组，如果有的话。",
-        		"3. 说明：splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。",
-            "如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。"
-          ]
-        },
-        {
-          "name": "slice()",
-          "grammar": "arrayObject.slice(start,end)",
-          "describe": "<p>作用：从已有的数组中返回选定的元素。</p> ",
-          "change": "否",
-          "expand": [
-            "1. 参数：start：必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。",
-            "end：可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素",
-            "2. 返回值：返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。",
-        		"3. 说明：请注意，该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。"
-          ]
-        },
-        {
-          "name": "reverse()",
-          "grammar": "arrayObject.reverse()",
-          "describe": "<p>作用：颠倒数组中元素的顺序。</p> ",
-          "change": "是",
-          "expand": [
-            "1. 参数：无",
-            "2. 返回值：被修改后的原元素。",
-        		"3. 说明：该方法会改变原来的数组，而不会创建新的数组。"
-          ]
-        },
-        {
-          "name": "sort()",
-          "grammar": "arrayObject.sort(sortby)",
-          "describe": "<p>作用：用于对数组的元素进行排序。</p> ",
-          "change": "是",
-          "expand": [
-            "1. 参数：sortby：可选。规定排序顺序。必须是函数。",
-            "2. 返回值：对数组的引用。请注意，数组在原数组上进行排序，不生成副本。",
-        		"3. 说明：如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。",
-            "如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：",
-            "3.1 若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。",
-            "3.2 若 a 等于 b，则返回 0。",
-            "3.3 若 a 大于 b，则返回一个大于 0 的值。"
-          ]
-        },
-        {
-          "name": "toLocaleString()",
-          "grammar": "arrayObject.toLocaleString()",
-          "describe": "<p>作用：把数组转换为本地数组，并返回结果。</p> ",
-          "change": "否",
-          "expand": [
-            "1. 参数：无",
-            "2. 返回值：arrayObject 的本地字符串表示。",
-        		"3. 说明：首先调用每个数组元素的 toLocaleString() 方法，然后使用地区特定的分隔符把生成的字符串连接起来，形成一个字符串。"
-          ]
-        },
-        {
-          "name": "valueOf()",
-          "grammar": "arrayObject.valueOf()",
-          "describe": "<p>作用：valueOf() 方法返回 Array 对象的原始值。</p> ",
-          "change": "否",
-          "expand": [
-            "1. 参数：无",
-            "2. 返回值：返回 Array 对象的原始值。",
-        		"3. 说明：该原始值由 Array 对象派生的所有对象继承。valueOf() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。"
-          ]
-        },
-        {
-          "name": "toSource()",
-          "grammar": "object.toSource()",
-          "describe": "<p>作用：返回该对象的源代码。</p> ",
-          "change": "否",
-          "expand": [
-            "1. 参数：无",
-            "2. 返回值：。",
-        		"3. 说明：不需要关注。"
-          ]
-        }]
+            "name": "concat()",
+            "grammar": "arrayObject.concat(arrayX,arrayX,......,arrayX)",
+            "describe": "<p>作用：方法用于连接两个或多个数组</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：arrayX：必需。该参数可以是具体的值，也可以是数组对象。可以是任意多个。",
+              "2. 返回值：返回一个新的数组。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。如果要进行 concat() 操作的参数是数组，那么添加的是数组中的元素，而不是数组。"
+            ],
+            "code": [{
+                "notes": "// 数组合并 可以用扩展运算符“...”实现同样的效果",
+                "text": "let arr1 = [0, 5];let arr2 = [6, 2];let arr3 = [].concat(arr1, arr2);",
+                "print": "// arr3 = [0, 5, 6, 2]"
+              },
+              {
+                "notes": "// 可以用扩展运算符“...”实现同样的效果",
+                "text": "let arr4 = [...arr1, ...arr2];",
+                "print": "// arr4 = [0, 5, 6, 2]"
+              },
+              {
+                "notes": "// 数组的克隆 可以用扩展运算符“...”实现同样的效果",
+                "text": "let arrObj1 = [{name: 'test'}],arrObj2 = [{name: 'name2'}];let arrObj3 = [].concat(arrObj1);let arrObj4 = [...arrObj2];",
+                "print": "// arr3 = [{name: 'test'}], arrObj4 = [{name: 'name2'}]"
+              },
+              {
+                "notes": "// 这种克隆方式属于浅拷贝",
+                "text": "arrObj3[0].name = 'change';arrObj4[0].name = 'change2';",
+                "print": "// arrObj1, arrObj3 = [{name: 'change'}], arrObj2, arrObj4 = [{name: 'change2'}]"
+              }
+            ]
+          },
+          {
+            "name": "join()",
+            "grammar": "arrayObject.join(separator)",
+            "describe": "<p>作用：把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：separator：可选。指定要使用的分隔符。如果省略该参数，则使用逗号作为分隔符。",
+              "2. 返回值：返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。"
+            ],
+            "code": [{
+              "notes": "// join()等效于toString()",
+              "text": "let arr = [1, 2, 3];console.log(arr.join());console.log(arr.join(''));console.log(arr.join('-'));",
+              "print": "// 1,2,3 —— 123 —— 1-2-3"
+            }]
+          },
+          {
+            "name": "toString()",
+            "grammar": "arrayObject.toString()",
+            "describe": "<p>作用：可把数组转换为字符串，并返回结果。</p> ",
+            "change": "是",
+            "expand": [
+              "1. 参数：无",
+              "2. 返回值：arrayObject 的字符串表示。返回值与没有参数的 join() 方法返回的字符串相同。",
+              "3. 说明：当数组用于字符串环境时，JavaScript 会调用这一方法将数组自动转换成字符串。但是在某些情况下，需要显式地调用该方法。"
+            ],
+            "code": [{
+              "notes": "// toString()等效于join()",
+              "text": "let arr = [1, 2, 3];console.log(arr.toString());",
+              "print": "// 1,2,3"
+            }]
+          },
+          {
+            "name": "pop()",
+            "grammar": "arrayObject.pop()",
+            "describe": "<p>作用：删除并返回数组的最后一个元素</p>",
+            "change": "是",
+            "expand": [
+              "1. 参数：无",
+              "2. 返回值：arrayObject 的最后一个元素。",
+              "3. 说明：pop() 方法将删除 arrayObject 的最后一个元素，把数组长度减 1，并且返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。"
+            ],
+            "code": [{
+              "notes": "// 代码例子",
+              "text": "let arr = [1, 2, 3];let lastestEl = arr.pop(); console.log(lastestEl, arr);",
+              "print": "// 3, [1, 2]"
+            }]
+          },
+          {
+            "name": "push()",
+            "grammar": "arrayObject.push(newelement1,newelement2,....,newelementX)",
+            "describe": "<p>作用：向数组末尾添加一个或多个元素，并返回新的长度。</p> ",
+            "change": "是",
+            "expand": [
+              "1. 参数：newelement1：必需。要添加到数组的第一个元素。",
+              "newelement2：可选。要添加到数组的第二个元素。",
+              "newelementX：可选。可添加多个元素。",
+              "2. 返回值：arrayObject 的最后一个元素。",
+              "3. 说明：pop() 方法将删除 arrayObject 的最后一个元素，把数组长度减 1，并且返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。"
+            ],
+            "code": [{
+                "notes": "// 单个参数",
+                "text": "let arr = [1, 2, 3]; let lastestEl = arr.push(1);console.log(arr, lastestEl);",
+                "print": "// [1, 2, 3, 1] —— 1"
+              },
+              {
+                "notes": "// 多个参数",
+                "text": "let arr1 = [1, 2, 3]; let lastestEl1 = arr1.push(1, 4); console.log(arr1, lastestEl1);",
+                "print": "// [1, 2, 3, 1, 4] —— 4"
+              },
+              {
+                "notes": "// 数组作为参数",
+                "text": "let arr2 = [1, 2, 3]; let lastestEl2 = arr2.push([1, 4]); console.log(arr2, lastestEl2);",
+                "print": "// [1, 2, 3, [1, 4]] —— [1, 4]"
+              },
+              {
+                "notes": "// 数组中每个元素逐一push到数组中，可以使用扩展运算符“...”",
+                "text": "let arr3 = [1, 2, 3]; let lastestEl3 = arr3.push(...[1, 4]); console.log(arr3, lastestEl3);",
+                "print": "// [1, 2, 3, 1, 4] —— 4"
+              }
+            ]
+          },
+          {
+            "name": "shift()",
+            "grammar": "arrayObject.shift()",
+            "describe": "<p>作用：方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。</p> ",
+            "change": "是",
+            "expand": [
+              "1. 参数：无",
+              "2. 返回值：数组原来的第一个元素的值。",
+              "3. 说明：如果数组是空的，那么 shift() 方法将不进行任何操作，返回 undefined 值。请注意，该方法不创建新数组，而是直接修改原有的 arrayObject。"
+            ],
+            "code": [{
+              "notes": "// 代码例子",
+              "text": "let arr = [1, 2, 3];let lastestEl = arr.shift(); console.log(lastestEl, arr);",
+              "print": "// 1, [2, 3]"
+            }]
+          },
+          {
+            "name": "unshift()",
+            "grammar": "arrayObject.unshift(newelement1,newelement2,....,newelementX)",
+            "describe": "<p>作用：向数组的开头添加一个或更多元素，并返回新的长度。</p> ",
+            "change": "是",
+            "expand": [
+              "1. 参数：newelement1：必需。要添加到数组的第一个元素。",
+              "newelement2：可选。要添加到数组的第二个元素。",
+              "newelementX：可选。可添加多个元素。",
+              "2. 返回值：arrayObject 的新长度。",
+              "3. 说明：unshift() 方法将把它的参数插入 arrayObject 的头部，并将已经存在的元素顺次地移到较高的下标处，以便留出空间。该方法的第一个参数将成为数组的新元素 0，如果还有第二个参数，它将成为新的元素 1，以此类推。"
+            ],
+            "code": [{
+                "notes": "// 单个参数",
+                "text": "let arr = [1, 2, 3]; let length = arr.unshift(2);console.log(arr, length);",
+                "print": "// [2, 1, 2, 3] —— 4"
+              },
+              {
+                "notes": "// 多个参数",
+                "text": "let arr1 = [1, 2, 3]; let length1 = arr1.unshift(1, 4); console.log(arr1, length1);",
+                "print": "// [1, 4, 1, 2, 3] —— 5"
+              },
+              {
+                "notes": "// 数组作为参数",
+                "text": "let arr2 = [1, 2, 3]; let length2 = arr2.unshift([1, 4]); console.log(arr2, length2);",
+                "print": "// [[1, 4], 1, 2, 3] —— 4"
+              },
+              {
+                "notes": "// 数组中每个元素逐一unshift到数组中，可以使用扩展运算符“...”",
+                "text": "let arr3 = [1, 2, 3]; let length3 = arr3.unshift(...[1, 4]); console.log(arr3, length3);",
+                "print": "// [1, 2, 3, 1, 4] —— 5"
+              }
+            ]
+          },
+          {
+            "name": "splice()",
+            "grammar": "arrayObject.splice(index,howmany,item1,.....,itemX)",
+            "describe": "<p>作用：向/从数组中添加/删除项目，然后返回被删除的项目。</p> ",
+            "change": "是",
+            "expand": [
+              "1. 参数：index：必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。",
+              "howmany：必需。要删除的项目数量。如果设置为 0，则不会删除项目。",
+              "item1, ..., itemX：可选。向数组添加的新项目。",
+              "2. 返回值：包含被删除项目的新数组，如果有的话。",
+              "3. 说明：splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。",
+              "如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。"
+            ],
+            "code": [{
+                "notes": "// 删除前面两个元素",
+                "text": "let arr = [1, 2, 3, 4, 5]; let delectedArr = arr.splice(0, 2);console.log(delectedArr, arr);",
+                "print": "// [1, 2] —— [3, 4, 5]"
+              },
+              {
+                "notes": "// 删除最后面两个元素，第一个参数为负数，且第二个参数必须>0, 且指定的项目数量无效",
+                "text": "let arr = [1, 2, 3, 4, 5]; let delectedArr = arr.splice(-2, 2);console.log(delectedArr, arr);",
+                "print": "// [4, 5] —— [1, 2, 3]"
+              },
+              {
+                "notes": "// 删除2-3两个元素，并在对应的位置插入“8”和“9”",
+                "text": "let arr = [1, 2, 3, 4, 5]; let delectedArr = arr.splice(1, 2, 8, 9);console.log(delectedArr, arr);",
+                "print": "// [2, 3] —— [1, 8, 9, 4, 5]"
+              }
+            ]
+          },
+          {
+            "name": "slice()",
+            "grammar": "arrayObject.slice(start,end)",
+            "describe": "<p>作用：从已有的数组中返回选定的元素。</p> ",
+            "change": "否",
+            "expand": [
+              "1. 参数：start：必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。",
+              "end：可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素",
+              "2. 返回值：返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。",
+              "3. 说明：请注意，该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。"
+            ],
+            "code": [{
+                "notes": "// 返回前面两个元素",
+                "text": "let arr = [1, 2, 3, 4, 5]; let selectedArr = arr.slice(0, 2);console.log(selectedArr);",
+                "print": "// [1, 2]"
+              },
+              {
+                "notes": "// 返回最后面两个元素，第一个参数为负数，且第二个参数必须>0, 且指定的项目数量无效",
+                "text": "let arr = [1, 2, 3, 4, 5]; selectedArr = arr.slice(-2);console.log(selectedArr);",
+                "print": "// [4, 5]"
+              },
+              {
+                "notes": "// 返回2-3两个元素",
+                "text": "let arr = [1, 2, 3, 4, 5]; selectedArr = arr.slice(1, 3);console.log(selectedArr);",
+                "print": "// [2, 3]"
+              }
+            ]
+          },
+          {
+            "name": "reverse()",
+            "grammar": "arrayObject.reverse()",
+            "describe": "<p>作用：颠倒数组中元素的顺序。</p> ",
+            "change": "是",
+            "expand": [
+              "1. 参数：无",
+              "2. 返回值：被修改后的原元素。",
+              "3. 说明：该方法会改变原来的数组，而不会创建新的数组。"
+            ],
+            "code": [{
+              "notes": "/* 颠倒数组中元素的顺序 */",
+              "text": "let arr = [1, 2, 3, 4, 5]; arr.reverse();console.log(arr);",
+              "print": "/* [5, 4, 3, 2, 1] */"
+            }]
+          },
+          {
+            "name": "sort()",
+            "grammar": "arrayObject.sort(sortby)",
+            "describe": "<p>作用：用于对数组的元素进行排序。</p> ",
+            "change": "是",
+            "expand": [
+              "1. 参数：sortby：可选。规定排序顺序。必须是函数。",
+              "2. 返回值：对数组的引用。请注意，数组在原数组上进行排序，不生成副本。",
+              "3. 说明：如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。",
+              "如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：",
+              "3.1 若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。",
+              "3.2 若 a 等于 b，则返回 0。",
+              "3.3 若 a 大于 b，则返回一个大于 0 的值。"
+            ],
+            "code": [{
+                "notes": "// 数字排序",
+                "text": "let arr = [5, 2, 1, 4, 6]; console.log(arr.sort());",
+                "print": "// [1, 2, 4, 5, 6]"
+              },
+              {
+                "notes": "// 字母排序排序",
+                "text": "let arr1 = ['d', 'dd', 'a', 'as', 'ad', 'f']; console.log(arr1.sort());",
+                "print": "// ['a', 'ad', 'as', 'd', 'dd', f]"
+              },
+              {
+                "notes": "// 对象元素根据字段值排序",
+                "text": "function compare(sortAttr) {return function (objA, objB) {let a = objA[sortAttr]; let b = objB[sortAttr];if (a > b) {return 1;} else if (a < b) {return -1;} else {return 0;}}} let arr2 = [{sortAttr: 't'}, {sortAttr: 'a'}, {sortAttr: 'ts'}, {sortAttr: 'e'}];console.log(arr2.sort(compare('sortAttr')));",
+                "print": "// [{sortAttr: 'a'}, {sortAttr: 'e'}, {sortAttr: 't'}, {sortAttr: 'ts'}]"
+              }
+            ]
+          },
+          {
+            "name": "toLocaleString()",
+            "grammar": "arrayObject.toLocaleString()",
+            "describe": "<p>作用：把数组转换为本地数组，并返回结果。</p> ",
+            "change": "否",
+            "expand": [
+              "1. 参数：无",
+              "2. 返回值：arrayObject 的本地字符串表示。",
+              "3. 说明：首先调用每个数组元素的 toLocaleString() 方法，然后使用地区特定的分隔符把生成的字符串连接起来，形成一个字符串。"
+            ]
+          },
+          {
+            "name": "valueOf()",
+            "grammar": "arrayObject.valueOf()",
+            "describe": "<p>作用：valueOf() 方法返回 Array 对象的原始值。</p> ",
+            "change": "否",
+            "expand": [
+              "1. 参数：无",
+              "2. 返回值：返回 Array 对象的原始值。",
+              "3. 说明：该原始值由 Array 对象派生的所有对象继承。valueOf() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。"
+            ]
+          },
+          {
+            "name": "toSource()",
+            "grammar": "object.toSource()",
+            "describe": "<p>作用：返回该对象的源代码。</p> ",
+            "change": "否",
+            "expand": [
+              "1. 参数：无",
+              "2. 返回值：。",
+              "3. 说明：不需要关注。"
+            ]
+          }
+        ]
       }
     },
     {
@@ -323,86 +447,142 @@
           }
         ],
         "data": [{
-          "name": "forEach()",
-          "grammar": "arrayObject.forEach(currentValue, index, arr)",
-          "describe": "<p>作用：用于调用数组的每个元素，并将元素传递给回调函数。</p>",
-          "change": "是",
-          "expand": [
-            "1. 参数：currentValue：必需。当前元素",
-            "index：可选。当前元素的索引值",
-            "arr：可选。当前元素所属的数组对象。",
-            "2. 返回值：无。",
-            "3. 说明：数组遍历。"
-          ]
-        },
-        {
-          "name": "filter()",
-          "grammar": "arrayObject.filter(currentValue, index, arr)",
-          "describe": "<p>作用：创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：currentValue：必需。当前元素",
-            "index：可选。当前元素的索引值",
-            "arr：可选。当前元素所属的数组对象。",
-            "2. 返回值：返回符合条件元素组成的数组。",
-            "3. 说明：过滤，返回新数组。"
-          ]
-        },
-        {
-          "name": "map()",
-          "grammar": "arrayObject.map(currentValue, index, arr)",
-          "describe": "<p>作用：返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：currentValue：必需。当前元素",
-            "index：可选。当前元素的索引值",
-            "arr：可选。当前元素所属的数组对象。",
-            "2. 返回值：返回符合条件元素组成的数组。",
-            "3. 说明：映射，返回新数组。"
-          ]
-        },
-        {
-          "name": "some()",
-          "grammar": "arrayObject.some(currentValue, index, arr)",
-          "describe": "<p>作用：用于检测数组中的元素是否满足指定条件。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：currentValue：必需。当前元素",
-            "index：可选。当前元素的索引值",
-            "arr：可选。当前元素所属的数组对象。",
-            "2. 返回值：布尔值。",
-            "3. 说明：如果有一个元素满足条件，则表达式返回true , 剩余的元素不会再执行检测。",
-            "如果没有满足条件的元素，则返回false"
-          ]
-        },
-        {
-          "name": "every()",
-          "grammar": "arrayObject.every(currentValue, index, arr)",
-          "describe": "<p>作用：于检测数组所有元素是否都符合指定条件。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：currentValue：必需。当前元素",
-            "index：可选。当前元素的索引值",
-            "arr：可选。当前元素所属的数组对象。",
-            "2. 返回值：布尔值。",
-            "3. 说明：如果数组中检测到有一个元素不满足，则整个表达式返回 false ，且剩余的元素不会再进行检测。",
-            "如果所有元素都满足条件，则返回 true"
-          ]
-        },
-        {
-          "name": "reduce()",
-          "grammar": "arrayObject.reduce(total, currentValue, index, arr)",
-          "describe": "<p>作用：接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：total：必需。初始值, 或者计算结束后的返回值",
-            "currentValue：必需。当前元素",
-            "index：可选。当前元素的索引值",
-            "arr：可选。当前元素所属的数组对象。",
-            "2. 返回值：布尔值。",
-            "3. 说明：可以作为一个高阶函数，用于函数的 compose"
-          ]
-        }]
+            "name": "forEach()",
+            "grammar": "arrayObject.forEach(currentValue, index, arr)",
+            "describe": "<p>作用：用于调用数组的每个元素，并将元素传递给回调函数。</p>",
+            "change": "是",
+            "expand": [
+              "1. 参数：currentValue：必需。当前元素",
+              "index：可选。当前元素的索引值",
+              "arr：可选。当前元素所属的数组对象。",
+              "2. 返回值：无。",
+              "3. 说明：数组遍历。"
+            ],
+            "code": [{
+                "notes": "// 元素为基本类型数据，证明不修改原数组",
+                "text": "let arr = [1, 3, 5];arr.forEach(item => {item += 1}); console.log(arr);",
+                "print": "// [1, 3, 5]"
+              },
+              {
+                "notes": "// 元素为引用类型数据，因为元素对象地址不变，所以对象元素属性值会发生变化。",
+                "text": "let arr1 = [{val: 1}, {val: 3}, {val: 5}];arr1.forEach(item => {item.val += 1}); console.log(arr1);",
+                "print": "// [ { val: 2 }, { val: 4 }, { val: 6 } ]"
+              }
+            ]
+          },
+          {
+            "name": "filter()",
+            "grammar": "arrayObject.filter(currentValue, index, arr)",
+            "describe": "<p>作用：创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：currentValue：必需。当前元素",
+              "index：可选。当前元素的索引值",
+              "arr：可选。当前元素所属的数组对象。",
+              "2. 返回值：返回符合条件元素组成的数组。",
+              "3. 说明：过滤，返回新数组。"
+            ],
+            "code": [{
+              "notes": "//过滤，返回符合条件元素组成的数组 。",
+              "text": "let arr1 = [{val: 1}, {val: 3}, {val: 5}];let filterArr = arr1.filter(item => {return item.val > 1}); console.log(filterArr);",
+              "print": "// [ { val: 3 }, { val: 5 } ]"
+            }]
+          },
+          {
+            "name": "map()",
+            "grammar": "arrayObject.map(currentValue, index, arr)",
+            "describe": "<p>作用：返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：currentValue：必需。当前元素",
+              "index：可选。当前元素的索引值",
+              "arr：可选。当前元素所属的数组对象。",
+              "2. 返回值：返回符合条件元素组成的数组。",
+              "3. 说明：映射，返回新数组。"
+            ],
+            "code": [{
+                "notes": "// 返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。",
+                "text": "let arr1 = [{val: 1}, {val: 3}, {val: 5}];let mapArr = arr1.map(item => { item.val += 1; return item}); console.log(mapArr);",
+                "print": "// [ { val: 2 }, { val: 4 }, { val: 6 } ]"
+              },
+              {
+                "notes": "// 返回什么就是什么",
+                "text": "let arr2 = [{val: 1}, {val: 3}, {val: 5}];let mapArr1 = arr2.map(item => { return item.val += 1;}); console.log(mapArr1);",
+                "print": "// [ 2, 4, 6 ]"
+              }
+            ]
+          },
+          {
+            "name": "some()",
+            "grammar": "arrayObject.some(currentValue, index, arr)",
+            "describe": "<p>作用：用于检测数组中的元素是否满足指定条件。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：currentValue：必需。当前元素",
+              "index：可选。当前元素的索引值",
+              "arr：可选。当前元素所属的数组对象。",
+              "2. 返回值：布尔值。",
+              "3. 说明：如果有一个元素满足条件，则表达式返回true , 剩余的元素不会再执行检测。",
+              "如果没有满足条件的元素，则返回false"
+            ],
+            "code": [{
+                "notes": "// 存在满足条件的返回true。",
+                "text": "let arr1 = [1, 2, 3];let has = arr1.some(item => { return item > 2}); console.log(has);",
+                "print": "// true"
+              },
+              {
+                "notes": "// 不存在满足条件的返回false。",
+                "text": "let arr1 = [1, 2, 3];let has = arr1.some(item => { return item > 5}); console.log(has);",
+                "print": "// false"
+              }
+            ]
+          },
+          {
+            "name": "every()",
+            "grammar": "arrayObject.every(currentValue, index, arr)",
+            "describe": "<p>作用：于检测数组所有元素是否都符合指定条件。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：currentValue：必需。当前元素",
+              "index：可选。当前元素的索引值",
+              "arr：可选。当前元素所属的数组对象。",
+              "2. 返回值：布尔值。",
+              "3. 说明：如果数组中检测到有一个元素不满足，则整个表达式返回 false ，且剩余的元素不会再进行检测。",
+              "如果所有元素都满足条件，则返回 true"
+            ],
+            "code": [{
+                "notes": "// 每个元素都满足条件的返回true。",
+                "text": "let arr1 = [1, 2, 3];let has = arr1.every(item => { return item > 0}); console.log(has);",
+                "print": "// true"
+              },
+              {
+                "notes": "// 存在一个元素不满足条件的返回false。",
+                "text": "let arr1 = [1, 2, 3];let has = arr1.every(item => { return item > 2}); console.log(has);",
+                "print": "// false"
+              }
+            ]
+          },
+          {
+            "name": "reduce()",
+            "grammar": "arrayObject.reduce(total, currentValue, index, arr)",
+            "describe": "<p>作用：接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：total：必需。初始值, 或者计算结束后的返回值",
+              "currentValue：必需。当前元素",
+              "index：可选。当前元素的索引值",
+              "arr：可选。当前元素所属的数组对象。",
+              "2. 返回值：布尔值。",
+              "3. 说明：可以作为一个高阶函数，用于函数的 compose"
+            ],
+            "code": [{
+                "notes": "// 累加器。",
+                "text": "let arr1 = [1, 2, 3]; let total = 0; let totalResult = arr1.reduce((total, item) => { return total += item}); console.log(totalResult);",
+                "print": "// 6"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -435,116 +615,298 @@
           }
         ],
         "data": [{
-          "name": "from()",
-          "grammar": "Array.from()",
-          "describe": "<p>作用：用于将两类对象转为真正的数组。</p>",
-          "change": "",
-          "expand": [
-            "1. 参数：currentValue：必需。当前元素",
-            "2. 返回值：数组。",
-            "3. 说明：只要是部署了 Iterator 接口的数据结构，Array.from都能将其转为数组。",
-            "类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）"
-          ]
-        },
-        {
-          "name": "of()",
-          "grammar": "Array.of()",
-          "describe": "<p>作用：用于将一组值，转换为数组。</p>",
-          "change": "",
-          "expand": [
-            "1. 参数：currentValue：必需。当前元素",
-            "2. 返回值：数组。",
-            "3. 说明：这个方法的主要目的，是弥补数组构造函数Array()的不足。因为参数个数的不同，会导致Array()的行为有差异。",
-            "Array.of()基本上可以用来替代Array()或new Array()，并且不存在由于参数不同而导致的重载。它的行为非常统一。"
-          ]
-        },
-        {
-          "name": "copyWithin()",
-          "grammar": "arrayObject.copyWithin(target, start = 0, end = this.length)",
-          "describe": "<p>作用：在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。</p>",
-          "change": "是",
-          "expand": [
-            "1. 参数：target（必需）：从该位置开始替换数据。如果为负值，表示倒数",
-            "start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示从末尾开始计算",
-            "end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示从末尾开始计算",
-            "2. 返回值：数组。",
-            "3. 说明：三个参数都应该是数值，如果不是，会自动转为数值。"
-          ]
-        },
-        {
-          "name": "find()",
-          "grammar": "arrayObject.find()",
-          "describe": "<p>作用：用于找出第一个符合条件的数组成员。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：接受一个回调函数",
-            "2. 返回值：布尔值。",
-            "3. 说明：参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。",
-            "回调函数可以接受三个参数，依次为当前的值、当前的位置和原数组"
-          ]
-        },
-        {
-          "name": "findIndex()",
-          "grammar": "arrayObject.findIndex()",
-          "describe": "<p>作用：返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：接受一个回调函数",
-            "2. 返回值：索引值。",
-            "3. 说明：弥补了数组的indexOf方法的不足。 [NaN].indexOf(NaN) 结果为 -1；[NaN].findIndex(y => Object.is(NaN, y)) 结果为 0",
-            "回调函数可以接受三个参数，依次为当前的值、当前的位置和原数组"
-          ]
-        },
-        {
-          "name": "fill()",
-          "grammar": "arrayObject.fill(value, start, end)",
-          "describe": "<p>作用：使用给定值，填充一个数组。</p>",
-          "change": "是",
-          "expand": [
-            "1. 参数：value：填充值",
-            "start：指定填充的起始位置",
-            "end：指定填充的结束位置",
-            "2. 返回值：数组。",
-            "3. 说明：fill方法用于空数组的初始化非常方便。数组中已有的元素，会被全部抹去。。",
-            "注意，如果填充的类型为对象，那么被赋值的是同一个内存地址的对象，而不是深拷贝对象。"
-          ]
-        },
-        {
-          "name": "includes()",
-          "grammar": "arrayObject.includes(value, start)",
-          "describe": "<p>作用：返回一个布尔值，表示某个数组是否包含给定的值。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：value：要检查的值",
-            "start：第二个参数表示搜索的起始位置，默认为0。如果第二个参数为负数，则表示倒数的位置，如果这时它大于数组长度（比如第二个参数为-4，但数组长度为3），则会重置为从0开始",
-            "2. 返回值：布尔值。",
-            "3. 说明：该方法检查数组是否包含某个值。"
-          ]
-        },
-        {
-          "name": "flat()",
-          "grammar": "arrayObject.flat(value)",
-          "describe": "<p>作用：用于将嵌套的数组“拉平”，变成一维的数组。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：value：表示要“拉平”的层数",
-            "2. 返回值：返回一个新数组。",
-            "3. 说明：如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。"
-          ]
-        },
-        {
-          "name": "flatMap()",
-          "grammar": "arrayObject.flatMap(function(currentValue, index, array), pointer)",
-          "describe": "<p>作用：对原数组的每个成员执行一个函数（相当于执行Array.prototype.map()），然后对返回值组成的数组执行flat()方法。</p>",
-          "change": "否",
-          "expand": [
-            "1. 参数：function：一个遍历函数",
-            "pointer: 用来绑定遍历函数里面的this",
-            "2. 返回值：返回一个新数组。",
-            "3. 说明：回调函数参数 currentValue - 当前数组成员, index - 当前数组成员的位置（从零开始）, array - 原数组。"
-          ]
-        }]
+            "name": "from()",
+            "grammar": "Array.from()",
+            "describe": "<p>作用：用于将两类对象转为真正的数组。</p>",
+            "change": "",
+            "expand": [
+              "1. 参数：currentValue：必需。当前元素",
+              "2. 返回值：数组。",
+              "3. 说明：只要是部署了 Iterator 接口的数据结构，Array.from都能将其转为数组。",
+              "类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）"
+            ],
+            "code": [
+              {
+                "text": "let arrayLike = { '0': 'a', '1': 'b', '2': 'c', length: 3 };"
+              },
+              {
+                "notes": "/* ES5的写法。 */",
+                "text": "var arr1 = [].slice.call(arrayLike);",
+                "print": "/* ['a', 'b', 'c'] */"
+              },
+              {
+                "notes": "/* ES6的写法。*/",
+                "text": " let arr2 = Array.from(arrayLike);",
+                "print": "/* ['a', 'b', 'c'] */"
+              }
+            ]
+          },
+          {
+            "name": "of()",
+            "grammar": "Array.of()",
+            "describe": "<p>作用：用于将一组值，转换为数组。</p>",
+            "change": "",
+            "expand": [
+              "1. 参数：currentValue：必需。当前元素",
+              "2. 返回值：数组。",
+              "3. 说明：这个方法的主要目的，是弥补数组构造函数Array()的不足。因为参数个数的不同，会导致Array()的行为有差异。",
+              "Array.of()基本上可以用来替代Array()或new Array()，并且不存在由于参数不同而导致的重载。它的行为非常统一。",
+              "4. Array.of()总是返回参数值组成的数组。如果没有参数，就返回一个空数组。"
+            ],
+            "code": [
+              {
+                "notes": "/* Array.of()方法用于将一组值，转换为数组 */",
+                "text": "Array.of(3, 11, 8);",
+                "print": "/* [3,11,8] */"
+              },
+              {
+                "text": "Array.of(3);",
+                "print": "/* [3] */"
+              },
+              {
+                "text": "Array.of(3).length;",
+                "print": "/* 1 */"
+              },
+              {
+                "text": "Array.of();",
+                "print": "/* [] */"
+              },
+              {
+                "text": "Array.of(undefined);",
+                "print": "/* [undefined] */"
+              },
+              {
+                "notes": "/* Array.of()方法可以用下面的代码模拟实现。 */",
+                "text": "function ArrayOf(){return[].slice.call(arguments)};"
+              }
+            ]
+          },
+          {
+            "name": "copyWithin()",
+            "grammar": "arrayObject.copyWithin(target, start = 0, end = this.length)",
+            "describe": "<p>作用：在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。</p>",
+            "change": "是",
+            "expand": [
+              "1. 参数：target（必需）：从该位置开始替换数据。如果为负值，表示倒数",
+              "start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示从末尾开始计算",
+              "end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示从末尾开始计算",
+              "2. 返回值：返回当前数组。",
+              "3. 说明：三个参数都应该是数值，如果不是，会自动转为数值。"
+            ],
+            "code": [
+              {
+                "notes": "/* 从 3 号位直到数组结束的成员（4 和 5），复制到从 0 号位开始的位置，结果覆盖了原来的 1 和 2。 */",
+                "text": "[1, 2, 3, 4, 5].copyWithin(0, 3);",
+                "print": "/* [4, 5, 3, 4, 5] */"
+              },
+              {
+                "notes": "/* 将3号位复制到0号位 */",
+                "text": "[1, 2, 3, 4, 5].copyWithin(0, 3, 4);",
+                "print": "/* [4, 2, 3, 4, 5] */"
+              },
+              {
+                "notes": "/* -2相当于3号位，-1相当于4号位。 */",
+                "text": "[1, 2, 3, 4, 5].copyWithin(0, -2, -1);",
+                "print": "/* [4, 2, 3, 4, 5] */"
+              }
+            ]
+          },
+          {
+            "name": "find()",
+            "grammar": "arrayObject.find()",
+            "describe": "<p>作用：用于找出第一个符合条件的数组成员。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：接受一个回调函数；可以接受第二个参数，用来绑定回调函数的this对象",
+              "2. 返回值：布尔值。",
+              "3. 说明：参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。",
+              "回调函数可以接受三个参数，依次为当前的值、当前的位置和原数组",
+              "4. 这个方法都可以发现NaN，弥补了数组的indexOf方法的不足。"
+            ],
+            "code": [
+              {
+                "notes": "/* 找出数组中第一个小于 0 的成员 */",
+                "text": "[1, 4, -5, 10, -6].find((n) => n < 0);",
+                "print": "/* -5 */"
+              },
+              {
+                "notes": "/* 找出数组中第一个大于 9 的成员 */",
+                "text": "[1,5,10,15].find(function(value,index,arr){return value>9});",
+                "print": "/* 10 */"
+              },
+              {
+                "notes": "/* find函数接收了第二个参数person对象，回调函数中的this对象指向person对象。 */",
+                "text": "function f(v){ return v > this.age;}let person = {name: 'John', age: 20};[10, 12, 26, 15].find(f, person);",
+                "print": "/* 26 */"
+              }
+            ]
+          },
+          {
+            "name": "findIndex()",
+            "grammar": "arrayObject.findIndex()",
+            "describe": "<p>作用：返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：接受一个回调函数；可以接受第二个参数，用来绑定回调函数的this对象",
+              "2. 返回值：索引值。",
+              "3. 说明：弥补了数组的indexOf方法的不足。 [NaN].indexOf(NaN) 结果为 -1；[NaN].findIndex(y => Object.is(NaN, y)) 结果为 0",
+              "回调函数可以接受三个参数，依次为当前的值、当前的位置和原数组",
+              "4. 这个方法都可以发现NaN，弥补了数组的indexOf方法的不足。"
+            ],
+            "code": [
+              {
+                "notes": "/* 找出数组中第一个小于 0 的成员 */",
+                "text": "[1,5,10,15].findIndex(function(value,index,arr){return value>9});",
+                "print": "/* 2 */"
+              },
+              {
+                "notes": "/* 找出数组中第一个大于 9 的成员 */",
+                "text": "[1,5,10,15].find(function(value,index,arr){return value>9});",
+                "print": "/* 10 */"
+              },
+              {
+                "text": "[NaN].indexOf(NaN);",
+                "print": "/* -1 */"
+              },
+              {
+                "text": "[NaN].findIndex(y => Object.is(NaN, y));",
+                "print": "/* 0 */"
+              }
+            ]
+          },
+          {
+            "name": "fill()",
+            "grammar": "arrayObject.fill(value, start, end)",
+            "describe": "<p>作用：使用给定值，填充一个数组。</p>",
+            "change": "是",
+            "expand": [
+              "1. 参数：value：填充值",
+              "start：指定填充的起始位置",
+              "end：指定填充的结束位置",
+              "2. 返回值：数组。",
+              "3. 说明：fill方法用于空数组的初始化非常方便。数组中已有的元素，会被全部抹去。。",
+              "注意，如果填充的类型为对象，那么被赋值的是同一个内存地址的对象，而不是深拷贝对象。"
+            ],
+            "code": [
+              {
+                "text": "['a', 'b', 'c'].fill(7);",
+                "print": "/* [7, 7, 7] */"
+              },
+              {
+                "text": "new Array(3).fill(7);",
+                "print": "/* [7, 7, 7] */"
+              },
+              {
+                "text": "['a', 'b', 'c'].fill(7, 1, 2);",
+                "print": "/* ['a', 7, 'c'] */"
+              },
+              {
+                "notes": "/* 注意，如果填充的类型为对象，那么被赋值的是同一个内存地址的对象，而不是深拷贝对象。 */",
+                "text": "let arr = new Array(3).fill({name: 'Mike'});arr[0].name = 'Ben';arr;",
+                "print": "/* [{name: 'Ben'}, {name: 'Ben'}, {name: 'Ben'}] */"
+              }
+            ]
+          },
+          {
+            "name": "includes()",
+            "grammar": "arrayObject.includes(value, start)",
+            "describe": "<p>作用：返回一个布尔值，表示某个数组是否包含给定的值。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：value：要检查的值",
+              "start：第二个参数表示搜索的起始位置，默认为0。如果第二个参数为负数，则表示倒数的位置，如果这时它大于数组长度（比如第二个参数为-4，但数组长度为3），则会重置为从0开始",
+              "2. 返回值：布尔值。",
+              "3. 说明：该方法检查数组是否包含某个值。"
+            ],
+            "code": [
+              {
+                "text": "[1, 2, 3].includes(2);",
+                "print": "/* true */"
+              },
+              {
+                "text": "[1, 2, NaN].includes(NaN);",
+                "print": "/* true */"
+              },
+              {
+                "text": "[1, 2, 3].includes(4);",
+                "print": "/* false */"
+              }
+            ]
+          },
+          {
+            "name": "flat()",
+            "grammar": "arrayObject.flat(value)",
+            "describe": "<p>作用：用于将嵌套的数组“拉平”，变成一维的数组。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：value：表示要“拉平”的层数",
+              "2. 返回值：返回一个新数组。",
+              "3. 说明：如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。"
+            ],
+            "code": [
+              {
+                "text": "[1, 2, [3, 4]].flat();",
+                "print": "/* [1, 2, 3, 4] */"
+              },
+              {
+                "notes": "/* flat()默认只会“拉平”一层，如果想要“拉平”多层的嵌套数组，可以将flat()方法的参数写成一个整数，表示想要拉平的层数，默认为1。 */",
+                "text": "[1, 2, [3, [4, 5]]].flat();",
+                "print": "/* [1, 2, 3, [4, 5]] */"
+              },
+              {
+                "text": "[1, 2, [3, [4, 5]]].flat(2);",
+                "print": "/* [1, 2, 3, 4, 5] */"
+              },
+              {
+                "notes": "/* 如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。 */",
+                "text": "[1, [2, [3]]].flat(Infinity);",
+                "print": "/* [1, 2, 3] */"
+              }
+            ]
+          },
+          {
+            "name": "flatMap()",
+            "grammar": "arrayObject.flatMap(function(currentValue, index, array), pointer)",
+            "describe": "<p>作用：对原数组的每个成员执行一个函数（相当于执行Array.prototype.map()），然后对返回值组成的数组执行flat()方法。</p>",
+            "change": "否",
+            "expand": [
+              "1. 参数：function：一个遍历函数",
+              "pointer: 用来绑定遍历函数里面的this",
+              "2. 返回值：返回一个新数组。",
+              "3. 说明：回调函数参数 currentValue - 当前数组成员, index - 当前数组成员的位置（从零开始）, array - 原数组。flatMap()只能展开一层数组。"
+            ],
+            "code": [
+              {
+                "text": "[2, 3, 4].flatMap((x) => [x, x * 2]);",
+                "print": "/* [2, 4, 3, 6, 4, 8] */"
+              },
+              {
+                "text": "[1, 2, 3, 4].flatMap(x => [[x * 2]]);",
+                "print": "/* [[2], [4], [6], [8]] */"
+              },
+              {
+                "notes": "/* 如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。 */",
+                "text": "[1, [2, [3]]].flat(Infinity);",
+                "print": "/* [1, 2, 3] */"
+              }
+            ]
+          }
+        ]
       }
-    }
+    },
+    {
+        "type": "subhead",
+        "data": {
+          "text": "参考资料："
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "content": [{
+            "text": "Array对象用于在单个的变量中存储多个值"
+          }]
+        }
+      }
   ]
 }
