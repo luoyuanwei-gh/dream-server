@@ -540,7 +540,7 @@
           {
             "name": "every()",
             "grammar": "arrayObject.every(currentValue, index, arr)",
-            "describe": "<p>作用：于检测数组所有元素是否都符合指定条件。</p>",
+            "describe": "<p>作用：用于检测数组所有元素是否都符合指定条件。</p>",
             "change": "否",
             "expand": [
               "1. 参数：currentValue：必需。当前元素",
@@ -895,18 +895,14 @@
       }
     },
     {
-        "type": "subhead",
-        "data": {
-          "text": "参考资料："
-        }
-      },
-      {
-        "type": "paragraph",
-        "data": {
-          "content": [{
-            "text": "Array对象用于在单个的变量中存储多个值"
-          }]
-        }
+      "type": "list",
+      "data": {
+        "desc": "参考资料：",
+        "content": [
+          "<a href='https://www.w3school.com.cn/jsref/jsref_obj_array.asp'>JavaScript Array 对象</a>",
+          "<a href='https://es6.ruanyifeng.com/#docs/array'>阮一峰：《ECMAScript 6 入门》——数组的扩展</a>"
+        ]
       }
+    }
   ]
 }
