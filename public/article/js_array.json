@@ -579,6 +579,11 @@
                 "notes": "// 累加器。",
                 "text": "let arr1 = [1, 2, 3]; let total = 0; let totalResult = arr1.reduce((total, item) => { return total += item}); console.log(totalResult);",
                 "print": "// 6"
+              },
+              {
+                "notes": "// 累加器，针对对象的属性进行计算",
+                "text": "var arr2=[{qty:1,amount:20},{qty:12,amount:21},{qty:11,amount:30}];var sumColumnList=['qty','amount'];var sumColumn={};var totalDataObj=arr2.reduce((sumColumn,currentValue)=>{sumColumnList.forEach(item=>{if(item!==undefined){sumColumn[item]=sumColumn[item]?sumColumn[item]+currentValue[item]:currentValue[item];}});return sumColumn;});console.log(totalDataObj);",
+                "print": "// { qty: 24, amount: 71 }"
               }
             ]
           }
@@ -899,8 +904,8 @@
       "data": {
         "desc": "参考资料：",
         "content": [
-          "<a href='https://www.w3school.com.cn/jsref/jsref_obj_array.asp'>JavaScript Array 对象</a>",
-          "<a href='https://es6.ruanyifeng.com/#docs/array'>阮一峰：《ECMAScript 6 入门》——数组的扩展</a>"
+          "<a href='https://www.w3school.com.cn/jsref/jsref_obj_array.asp' target='_blank'>JavaScript Array 对象</a>",
+          "<a href='https://es6.ruanyifeng.com/#docs/array' target='_blank'>阮一峰：《ECMAScript 6 入门》——数组的扩展</a>"
         ]
       }
     }
