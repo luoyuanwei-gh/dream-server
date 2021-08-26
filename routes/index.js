@@ -15,7 +15,6 @@ router.get('/getMenu', function(req, res, next) {
   });
 });
 
-
 router.get('/article/:id', function(req, res, next) {
   console.log(req.params.id)
   const fileName = req.params.id
