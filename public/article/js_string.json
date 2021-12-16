@@ -1,0 +1,38 @@
+{
+  "title": "JS字符串详解",
+  "author": "极品码农--罗源伟",
+  "time": "2021-1-12 20:07:05",
+  "content": [
+    {
+      "type": "subhead",
+      "data": {
+        "text": "创建字符串的方法："
+      }
+    },
+    {
+      "type": "code",
+      "data": [{
+          "notes": "// 使用字面量创建字符串",
+          "text": "var str = '123';",
+          "print": "// str = 123"
+        },
+        {
+          "notes": "// 使用构造函数创建数组",
+          "text": "var str = new String('123');",
+          "print": "// str = 123"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "data": {
+        "desc": "参考资料：",
+        "content": [
+          "<a href='https://www.w3school.com.cn/jsref/jsref_obj_string.asp' target='_blank'>JavaScript Array 对象</a>",
+          "<a href='https://es6.ruanyifeng.com/#docs/string-methods' target='_blank'>阮一峰：《ECMAScript 6 入门》——字符串的新增方法</a>",
+          "<a href='https://es6.ruanyifeng.com/#docs/string' target='_blank'>阮一峰：《ECMAScript 6 入门》——字符串的扩展</a>"
+        ]
+      }
+    }
+  ]
+}
