@@ -1,0 +1,22 @@
+添加文章：
+
+1、在 /public/menu/index.js 文件中添加目录配置信息
+{
+  id: 1,
+  name: 'javascript',
+  path: '/',
+  code: '0001',
+  icon: 'el-icon-location',
+  children: [
+    {
+      id: '11',
+      name: 'JS数组篇',
+      path: '/article/js_array', // 备注：js_array 为json文件名称
+      code: '0001-0001',
+      icon: 'el-icon-location'
+    }
+  ]
+},
+
+
+2、在目录 “/public/articl” 中添加对应的json文件

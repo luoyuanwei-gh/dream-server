@@ -78,6 +78,13 @@ module.exports = [
         path: '/article/js_array',
         code: '0001-0001',
         icon: 'el-icon-location'
+      },
+      {
+        id: '12',
+        name: 'JS字符串篇',
+        path: '/article/js_string',
+        code: '0001-0002',
+        icon: 'el-icon-location'
       }
     ]
   },
